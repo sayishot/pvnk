@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    body {
+        opacity: 0;
+        animation: fadeIn 4s ease;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+</style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ash</title>
+    <link rel="icon" href="../../images/dancing girl.gif">
+</head>
+<script> window.onload = function () { setTimeout(function () { document.getElementById("playpause").click(); }, 2000); } </script>
+
+<body onload="document.body.style.opacity='1'"></body>>
+
+<div id="DIV_1">
+    <img src="../../images/dancing girl.gif" alt="pfp" id="IMG_2" class="grow" />
+    <p id="P_3">
+        <span id="SPAN_4">DX9WARE</span><img src="../../images/throphy.png" id="IMG_5" alt='' />
+    </p>
+
+    <p id="P_6">
+        DX9WARE rules, what ash allows for the dx9 discord, what ash doesnt allow, and what ash can and cannot do.
+    </p>
+
+    
+    <div id="DIV_8">
+    </div>
+   <a href="https://discord.gg/coi" target="_blank" id="A_28"><button type="button" id="BUTTON_29">
+            DX9WARE discord
+        </button></a>
+
+
+    <a href="http://ash.rugmovies.ml/gg/coi/rules" target="_blank" id="A_28"><button type="button" id="BUTTON_29">
+        Rules
+    </button></a>
+
+    <a href="http://ash.rugmovies.ml/gg/coi/ash" target="_blank" id="A_28"><button type="button" id="BUTTON_29">
+        Ash Stuff For DX9WARE
+    </button></a>
+
+    <audio id="myaudio" loop>
+        <source
+            src="https://cdn.discordapp.com/attachments/1081395635388944406/1081395712014692452/Super_Mario_Lofi_Music.mp3"
+            type="audio/mp3">
+    </audio>
+    <button id="playpause" onclick="togglePlay()">Play Music</button>
+    <script>
+        var audio = document.getElementById("myaudio");
+        var button = document.getElementById("playpause");
+        var isPlaying = false;
+
+        var button = document.getElementById("playpause");
+
+        function togglePlay() {
+            if (isPlaying) {
+                audio.pause();
+                TweenMax.to(button, 0.3, { text: "Play" });
+            } else {
+                audio.play();
+                TweenMax.to(button, 0.3, { text: "Pause" });
+            }
+        }
+        audio.onplaying = function () {
+            isPlaying = true;
+        };
+        audio.onpause = function () {
+            isPlaying = false;
+        };
+
+    </script>
+
+    	<script src="cursor.js"></script>
+</div>
+
+
+
+</body>
+
+</html>

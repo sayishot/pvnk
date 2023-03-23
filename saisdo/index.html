@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ash</title>
+</head>
+<body>
+    <script id="SCRIPT_2">var TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = "";
+        this.tick();
+        this.isDeleting = false;
+      };
+      
+      TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+      
+        if (this.isDeleting) {
+          this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+          this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+      
+        this.el.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+      
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+      
+        if (this.isDeleting) {
+          delta /= 2;
+        }
+      
+        if (!this.isDeleting && this.txt === fullTxt) {
+          delta = this.period;
+          this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === "") {
+          this.isDeleting = false;
+          this.loopNum++;
+          delta = 500;
+        }
+      
+        setTimeout(function () {
+          that.tick();
+        }, delta);
+      };
+      
+      window.onload = function () {
+        var elements = document.getElementsByClassName("typewrite");
+        for (var i = 0; i < elements.length; i++) {
+          var toRotate = elements[i].getAttribute("data-type");
+          var period = elements[i].getAttribute("data-period");
+          if (toRotate) {
+            new TxtType(elements[i], JSON.parse(toRotate), period);
+          }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+      };
+      </script>
+      <style id="STYLE_3">.max-w-\[1100px\] {
+          
+              width:500px
+          }
+          </style>
+      <main id="MAIN_4">
+                  <div id="DIV_5">
+                  </div>
+                  <style id="STYLE_6">.click_anywhere {
+      
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);	
+          
+      }
+                  </style>
+                  <div id="DIV_7">
+                          <div id="DIV_8">
+                              <div id="DIV_9">
+                                  <h4 id="H4_10">
+                                      [Click Anywhere]
+                                  </h4>
+                              </div>
+                              <audio id="AUDIO_11">
+                                  <source id="SOURCE_12" />
+                                  <source id="SOURCE_13" />
+                              </audio>
+                              <div id="DIV_14">
+                                  <bgsound id="BGSOUND_15">
+                                  </bgsound>
+                              </div>
+                          </div>
+                      </div>
+                  <div id="DIV_16">
+                          <div id="DIV_17">
+                              <div id="DIV_18">
+                                  <div id="DIV_19">
+                                      <div id="DIV_20">
+                                          <div id="DIV_21">
+                                              <div id="DIV_22">
+                                                  <img src="https://feds.ventryshield.net/?url=https://cdn.discordapp.com/attachments/1080647796400594944/1086085840872165416/gif-de-batman-8.gif" alt="Image" id="IMG_23" />
+                                              </div>
+                                          </div>
+                                          <div id="DIV_24">
+                                              <div id="DIV_25">
+                                                  <h2 id="H2_26">
+                                                      ฏ๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎๎ash
+                                                  </h2><span id="SPAN_27"></span>
+                                                  <div id="DIV_28">
+                                                      <img src="https://i.imgur.com/MgZBYRy.png" id="IMG_29" alt='' />
+                                                  </div>
+                                              </div>
+                                              <p id="P_30">
+                                                  pvnk.tk/about/ash/<em id="EM_31"></em>
+                                              </p>
+                                              <p id="P_32">
+                                                  <i id="I_33"></i> 45
+                                              </p>
+                                          </div>
+                                          <div id="DIV_34">
+                                              <div id="DIV_35">
+                                                  <p id="P_36">
+                                                       <span id="SPAN_37"><span id="SPAN_38">dx9w</span></span>
+                                                  </p>
+                                              </div>
+                                          </div>
+                                          <div id="DIV_39">
+                                              <div id="DIV_40">
+                                                   <a href="https://discord.com/users/1048620399522492548" id="A_41"><img src="https://discord.c99.nl/widget/theme-4/1048620399522492548.png" id="IMG_42" alt='' /></a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div id="DIV_43">
+                                      <div id="DIV_44">
+                                          <div id="DIV_45">
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+              </main>
+      
+      <script id="SCRIPT_47">function playclip() {
+              if (navigator.appName == "Microsoft Internet Explorer" && (navigator.appVersion.indexOf("MSIE 7")!=-1) || (navigator.appVersion.indexOf("MSIE 8")!=-1)) {
+                  if (document.all) {
+                      document.all.sound.src = "song.mp3";
+                  }
+              } else {
+                  {
+                      var audio = document.getElementsByTagName("audio");
+      
+                      if(audio.length > 0) audio[0].play();
+      
+                      var video = document.getElementsByTagName("video");
+      
+                      if(video.length > 0) {
+                          video = video[0];
+                          video.removeAttribute('hidden');
+                          video.play();
+                      }
+                  }
+              }
+          }
+      
+      document.querySelector('.fedslol').addEventListener('click', function() {
+        
+        playclip();
+      });
+      
+      $(document).ready(function () {
+          $( document.body ).click(function() {
+          $(".clickanywhere").fadeOut(1000);
+          $(".biolink").fadeIn(1000);
+      
+          let play = function(){document.getElementById("audio").play()}
+          
+          
+      
+          
+          });
+      });
+                             
+      var _old = jQuery.Event.prototype.stopPropagation;
+      
+      jQuery.Event.prototype.stopPropagation = function() {
+          this.target.nodeName !== 'SPAN' && _old.apply( this, arguments );
+      };
+                      </script>
+      <style type="text/css" id="STYLE_48">.typewrite > .wrap { border-right: 0.08em solid #fff}
+                          </style>
+      <smart id="SMART-COPY_49">
+                              </smart>
+</body>
+</html>

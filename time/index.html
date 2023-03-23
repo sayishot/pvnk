@@ -1,0 +1,104 @@
+<html>
+<style>
+  p {
+    block-size: 25px;
+    border-block-end-color: rgb(255, 255, 255);
+    border-block-start-color: rgb(255, 255, 255);
+    border-inline-end-color: rgb(255, 255, 255);
+    border-inline-start-color: rgb(255, 255, 255);
+    caret-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    column-rule-color: rgb(255, 255, 255);
+    height: 25px;
+    inline-size: 80%;
+    margin-block-end:
+      0p x;
+    margin-block-start:
+      8p x;
+    perspective-origin:
+      300p x 12.5p x;
+    text-align:
+      center;
+    text-decoration:
+      none solid rgb(25 5,
+        25 5,
+        25 5);
+    text-emphasis-color:
+      rgb(25 5,
+        25 5,
+        25 5);
+    transform-origin:
+      300p x 12.5p x;
+      width: 80%;
+ 
+    animation:
+      2s ease 0s 1 normal none running up;
+    border:
+      0px none rgb(25 5,
+        25 5,
+        25 5);
+    font:
+      500 16p x poppins,
+      sans-serif;
+    margin:
+      8p x 0p x 0p x;
+    outline:
+      rgb(25 5,
+        25 5,
+        25 5) none 0px;
+  }
+  div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body {
+    background-image: url("background.gif"); background-size: 130% auto;
+  }
+</style>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script>
+  const sr = ScrollReveal();
+
+  const options = {
+    duration: 1000,
+    distance: "50px",
+    origin: "bottom",
+    easing: "ease-in-out",
+    beforeReveal: function (el) {
+      el.style.filter = "blur(5px)";
+    },
+    afterReveal: function (el) {
+      el.style.filter = "none";
+    },
+  };
+
+  sr.reveal(".blur", options);
+</script>
+<head>
+  <script>
+    function updateTime() {
+      var today = new Date();
+      var timeZones = Intl.supportedValuesOf("timeZone");
+      for (var i = 0; i < timeZones.length; i++) {
+        var timeZone = timeZones[i];
+        var element = document.getElementsByTagName("p")[i];
+        if (!element) {
+          var div = document.createElement("div");
+          element = document.createElement("p");
+          element.style.color = "white";
+          element.style.margin = "10px";
+          div.appendChild(element);
+          document.body.appendChild(div);
+        }
+        var timeZoneTime = today.toLocaleString("en-US", {timeZone: timeZone});
+        element.innerHTML = timeZone + " Time is: " + timeZoneTime;
+      }
+    }
+    setInterval(updateTime, 1000);
+  </script>
+</head>
+<body>
+</body>
+
+</html>
